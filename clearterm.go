@@ -1,10 +1,9 @@
-package mylib
+package main
 
 import ( 
 	"os"
 	"os/exec"
 )
-
 
 //Clearscreen ...
 func Clearscreen() {
@@ -14,4 +13,8 @@ func Clearscreen() {
 	cmd = exec.Command("cmd", "/c", "clear")
 	cmd.Stdout = os.Stdout
 	cmd.Run()
+}
+
+func main() {
+	Clearscreen()
 }
